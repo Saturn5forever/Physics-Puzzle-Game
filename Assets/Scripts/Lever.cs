@@ -11,7 +11,7 @@ public class Lever : MonoBehaviour
             case "Door":
             relatedEffect.GetComponent<EffectActions>().DoorLogic();
             break;
-
+        
             case "SurroundBox":
             relatedEffect.GetComponent<EffectActions>().SurroundingBoxLogic();
             break;

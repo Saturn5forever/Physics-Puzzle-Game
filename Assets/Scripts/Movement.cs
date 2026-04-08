@@ -16,13 +16,8 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 moveDirectionRAW = moveKeys.ReadValue<Vector2>().normalized;
-        moveDirection = (transform.right * moveDirectionRAW.x) + (transform.up * moveDirectionRAW.y);
-        rb.linearVelocity = moveDirection * moveSpeed;
+        moveDirection = new Vector2 (moveDirectionRAW.x, moveDirectionRAW.y);
+        rb.linearVelocity = moveDirection * moveSpeed * Time.fixedDeltaTime * 100f;
 
-    }
-
-    void Update()
-    {
-        
     }
 }

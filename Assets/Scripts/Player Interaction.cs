@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,11 +7,13 @@ public class PlayerInteraction : MonoBehaviour
 {
     public GameObject collidedWith;
     private bool inTrigger;
+    public TextMeshProUGUI interactText;
 
     void Start()
     {
         interactKey.Enable();
         inTrigger = false;
+        interactText.text = "";
     }
     public InputAction interactKey;
 
@@ -25,6 +29,10 @@ public class PlayerInteraction : MonoBehaviour
                 collidedWith.GetComponent<Lever>().Interact();
                 break;
 
+                case "Button":
+                collidedWith.GetComponent<Button>().Interact();
+                break;
+
                 default:
                 break;
             } 
@@ -34,9 +42,16 @@ public class PlayerInteraction : MonoBehaviour
     {
         inTrigger = true;
         collidedWith = collision.gameObject;
+        if(collision.gameObject.tag != "Plate")
+        {
+            interactText.text = "Interact";
+        }
+        
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         inTrigger = false;
+        interactText.text = "";
+        
     }
 }

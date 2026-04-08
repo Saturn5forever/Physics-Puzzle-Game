@@ -8,6 +8,8 @@ TagManager:
   - Box
   - Lever
   - SurroundBox
+  - Plate
+  - Button
   layers:
   - Default
   - TransparentFX
