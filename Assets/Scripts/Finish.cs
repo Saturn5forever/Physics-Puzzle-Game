@@ -1,11 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
-{   public Button nextLevelButton;
-    public Button restartButton;
+{   public GameObject nextLevelButton;
+    public GameObject restartButton;
     public bool levelComplete;
 
     void Start()
@@ -28,11 +26,11 @@ public class Finish : MonoBehaviour
     void SaveLevelStatus()
     {
         string levelKey = "Level_" + SceneManager.GetActiveScene().buildIndex;
-        PlayerPrefs.SetInt(levelKey, levelComplete ? 1 : 0);
+        PlayerPrefs.SetInt(levelKey, levelComplete ? 0 : 1);
         PlayerPrefs.Save();
     }
     
-    void LoadLevelStatus()
+    public void LoadLevelStatus()
     {
         string levelKey = "Level_" + SceneManager.GetActiveScene().buildIndex;
 

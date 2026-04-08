@@ -618,8 +618,10 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   rotationOffset: 90
+  rotationSpeed: 90
   player: {fileID: 723778669}
   pivotPoint: {fileID: 796554898}
+  targetRotation: 0
 --- !u!1001 &629298967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2319,6 +2321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1734572392879617056, guid: 143b67fdd39aadf4482b02264b10fb46, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2213892961710279362}
     - target: {fileID: 2049445565429994575, guid: 143b67fdd39aadf4482b02264b10fb46, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2416,6 +2422,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 143b67fdd39aadf4482b02264b10fb46, type: 3}
+--- !u!1 &4366559821529227484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1577233101507144580, guid: 143b67fdd39aadf4482b02264b10fb46, type: 3}
+  m_PrefabInstance: {fileID: 4366559821529227483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4366559821529227485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2293169133869217744, guid: 143b67fdd39aadf4482b02264b10fb46, type: 3}
+  m_PrefabInstance: {fileID: 4366559821529227483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5269016594933256068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2428,14 +2444,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish
       objectReference: {fileID: 0}
-    - target: {fileID: 7307911267058193974, guid: 3ffd373d5e8b65841bc1dca12b5ac3da, type: 3}
+    - target: {fileID: 6297941423466255741, guid: 3ffd373d5e8b65841bc1dca12b5ac3da, type: 3}
       propertyPath: restartButton
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7307911267058193974, guid: 3ffd373d5e8b65841bc1dca12b5ac3da, type: 3}
+      objectReference: {fileID: 4366559821529227484}
+    - target: {fileID: 6297941423466255741, guid: 3ffd373d5e8b65841bc1dca12b5ac3da, type: 3}
       propertyPath: nextLevelButton
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4366559821529227485}
     - target: {fileID: 8571107559270833948, guid: 3ffd373d5e8b65841bc1dca12b5ac3da, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.16

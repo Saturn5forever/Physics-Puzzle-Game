@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8571107559270833948}
   - component: {fileID: 1628054765895106807}
   - component: {fileID: 8005654558388586151}
-  - component: {fileID: 7307911267058193974}
+  - component: {fileID: 6297941423466255741}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210223516321576135}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.16, y: 19.16, z: 0}
   m_LocalScale: {x: 4.9598, y: 4.9598, z: 4.9598}
   m_ConstrainProportionsScale: 0
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7307911267058193974
+--- !u!114 &6297941423466255741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
