@@ -6,20 +6,25 @@ public class Finish : MonoBehaviour
     public GameObject restartButton;
     public bool levelComplete;
 
+    public AudioClip finishSound;
+
+    AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         nextLevelButton.gameObject.SetActive(false);
-        restartButton.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.gameObject.SetActive(false);
-            restartButton.gameObject.SetActive(true);
-            nextLevelButton.gameObject.SetActive(true);
+        {            
             SaveLevelStatus();
+            audioSource.PlayOneShot(finishSound);
+            collision.gameObject.SetActive(false);
+            nextLevelButton.gameObject.SetActive(true);
+
         }
     }
 

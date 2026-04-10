@@ -4,8 +4,17 @@ public class Lever : MonoBehaviour
 {
     public GameObject relatedEffect;
 
+    public AudioClip leverSound;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Interact()
     {
+        audioSource.PlayOneShot(leverSound);
+
         switch (relatedEffect.tag)
         {
             case "Door":

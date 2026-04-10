@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class LevelCompleteCheck : MonoBehaviour
 {
-    public string levelKey1 = "Level_1";
-    public string levelKey2 = "Level_2";
-    public string levelKey3 = "Level_3";
-    public string levelKey4 = "Level_4";
-    public string levelKey5 = "Level_5";
+    public string levelKey1 = "Level_2";
+    public string levelKey2 = "Level_3";
+    public string levelKey3 = "Level_4";
+    public string levelKey4 = "Level_5";
+    public string levelKey5 = "Level_6";
 
     public TextMeshProUGUI text1;
     public TextMeshProUGUI text2;

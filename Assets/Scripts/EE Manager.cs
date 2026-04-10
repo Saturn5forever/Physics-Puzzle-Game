@@ -14,6 +14,10 @@ public class EEManager : MonoBehaviour
 
     public TextMeshProUGUI EEText;
 
+    public AudioClip EESound;
+
+    AudioSource audioSource;
+
     void Start()
     {
         key1.Enable();
@@ -25,12 +29,18 @@ public class EEManager : MonoBehaviour
         key7.Enable();
 
         EEText.gameObject.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if(key1.IsPressed() && key2.IsPressed() && key3.IsPressed() && key4.IsPressed() && key5.IsPressed() && key6.IsPressed() && key7.IsPressed())
         {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(EESound);
+            }
             EEText.gameObject.SetActive(true);
         }
     }

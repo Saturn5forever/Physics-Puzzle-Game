@@ -19,7 +19,11 @@ public class EffectActions : MonoBehaviour
     public void SurroundingBoxLogic()
     {
         Debug.Log("S.U.R.R.O.U.N.D.I.N.G. B.O.X.");
-        Destroy(gameObject);
+        if(gameObject != null)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
 }
