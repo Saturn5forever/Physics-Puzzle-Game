@@ -1,6 +1,11 @@
 # Phyzzle!
 This is my game called *Phyzzle!* in it you can move boxes, rotate the world around, and more! All with the goal of reaching the box-shaped finish line.
 Here is the Itch.io Page: [Phyzzle!](https://saturn5forever.itch.io/phyzzle)
+
+Controls:
+W/A/S/D to move.
+Q to rotate the world counterclockwise.
+E to interact.
 -
 Here are some pictures of it:
 Level 1:
